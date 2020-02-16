@@ -16,7 +16,7 @@ function submitData(name, email) {
         })
         .then(function(object) {
             console.log("json", object)
-            document.body.innerHTML = object.id
+            document.querySelector("body").innerHTML = `<div><ul><li>${object.id}</li></ul></div>`
         })
         .catch(function (error) {
             alert("Unauthorized Access")
